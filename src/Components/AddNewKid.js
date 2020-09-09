@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { dataUri, Component } from "react";
 import Button from "@material-ui/core/Button";
 import PhotoCamera from "@material-ui/icons/PhotoCamera";
 import TextField from "@material-ui/core/TextField";
+import Avatar from "@material-ui/core/Avatar";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import PersonAddIcon from "@material-ui/icons/PersonAdd";
@@ -52,7 +53,7 @@ export default class Home extends Component {
                 >
                   Add Picture
                 </Button>
-
+                <Avatar src={dataUri} alt=""></Avatar>
                 <form className="Timer" noValidate>
                   <TimerIcon
                     id="time"
