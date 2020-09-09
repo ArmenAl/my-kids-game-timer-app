@@ -3,6 +3,7 @@ import Button from "@material-ui/core/Button";
 import PhotoCamera from "@material-ui/icons/PhotoCamera";
 import TextField from "@material-ui/core/TextField";
 import Avatar from "@material-ui/core/Avatar";
+import ImagePreview from "./ImagePreview/ImagePreview";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import PersonAddIcon from "@material-ui/icons/PersonAdd";
@@ -53,7 +54,9 @@ export default class Home extends Component {
                 >
                   Add Picture
                 </Button>
-                <Avatar src={dataUri} alt=""></Avatar>
+                <Avatar>
+                  <ImagePreview dataUri={dataUri} />
+                </Avatar>
                 <form className="Timer" noValidate>
                   <TimerIcon
                     id="time"
