@@ -17,7 +17,7 @@ function TakePhotoPage(props) {
   return (
     <div>
       {dataUri ? (
-        <ImagePreview dataUri={setDataUri} isFullscreen={isFullscreen} />
+        <ImagePreview dataUri={dataUri} isFullscreen={isFullscreen} />
       ) : (
         <Camera
           onTakePhotoAnimationDone={TakePhoto}
