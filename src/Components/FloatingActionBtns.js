@@ -28,7 +28,7 @@ export default function FloatingActionButtons() {
         to={"/addnewkid"}
       >
         <AddIcon className={classes.extendedIcon} />
-        Add New Kid
+        Add New Kid T
       </Fab>
     </div>
   );
