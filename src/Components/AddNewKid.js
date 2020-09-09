@@ -1,8 +1,7 @@
-import React, { dataUri, Component } from "react";
+import React, { useState, Component } from "react";
 import Button from "@material-ui/core/Button";
 import PhotoCamera from "@material-ui/icons/PhotoCamera";
 import TextField from "@material-ui/core/TextField";
-import Avatar from "@material-ui/core/Avatar";
 import ImagePreview from "./ImagePreview/ImagePreview";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
@@ -12,6 +11,10 @@ import TimerIcon from "@material-ui/icons/Timer";
 import { Link } from "react-router-dom";
 
 import "./AddNewKid.css";
+
+const [dataUri, setDataUri] = useState("");
+setDataUri(dataUri);
+const isFullscreen = false;
 
 export default class Home extends Component {
   render() {
@@ -54,9 +57,8 @@ export default class Home extends Component {
                 >
                   Add Picture
                 </Button>
-                <Avatar>
-                  <ImagePreview dataUri={dataUri} />
-                </Avatar>
+                <ImagePreview dataUri={dataUri} isFullscreen={isFullscreen} />
+
                 <form className="Timer" noValidate>
                   <TimerIcon
                     id="time"
